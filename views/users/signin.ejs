@@ -7,8 +7,12 @@
       <section class="container">
         <h2><span>INICIAR SESI&Oacute;N</span></h2>
 
+        <section class="invisible" id="errors-area">
+          <ul id="errors-list"></ul>
+        </section>
+
         <div class="form-area">
-          <form action="#" method="post" novalidate>
+          <form action="#" method="post" id="signinForm" novalidate>
             <div class="form-group">
               <!-- <label for="email">Email</label> -->
               <label for="username">Usuario</label>
@@ -48,6 +52,7 @@
         </div>
       </section>
       <%- include('../partials/follow-us') %> <%- include('../partials/footer') %>
+      <script src="/js/validateLogin.js"></script>
   </body>
 
 </html>

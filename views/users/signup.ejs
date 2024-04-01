@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
 <%- include('../partials/head') %>
 
   <body>
@@ -8,14 +6,20 @@
       <section class="container">
         <h2><span>CREAR CUENTA</span></h2>
 
+        <section class="invisible" id="errors-area">
+          <ul id="errors-list"></ul>
+        </section>
+
         <div class="form-area">
-          <form action="/users" method="post" enctype="multipart/form-data">
+          <form action="/users" method="post" enctype="multipart/form-data" id="registerForm">
 
             <div class="form-group">
               <label>Nombre y Apellido</label>
               <input type="text" name="nombre"
                 class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.nombre : null %>">
+                value="<%= locals.oldData ? oldData.nombre : null %>"
+                id="nombre"
+              >
               <% if (locals.errors && errors.nombre) { %>
                 <div class="invalid-input">
                   <%= errors.nombre.msg %>
@@ -27,7 +31,9 @@
               <label>Nombre de Usuario</label>
               <input type="text" name="username"
                 class="form-control <%= locals.errors && errors.username ? 'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.username : null %>">
+                value="<%= locals.oldData ? oldData.username : null %>"
+                id="username"
+                >
               <% if (locals.errors && errors.username) { %>
                 <div class="invalid-input">
                   <%= errors.username.msg %>
@@ -39,7 +45,9 @@
               <label>Email</label>
               <input type="text" name="email"
                 class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.email : null %>">
+                value="<%= locals.oldData ? oldData.email : null %>"
+                id="email"
+              >
               <% if (locals.errors && errors.email) { %>
                 <div class="invalid-input">
                   <%= errors.email.msg %>
@@ -48,10 +56,12 @@
             </div>
 
             <div class="form-group">
-              <label>Teléfono</label>
+              <label>Tel&eacute;fono</label>
               <input type="number" name="telefono"
                 class="form-control <%= locals.errors && errors.telefono ? 'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.telefono : null %>">
+                value="<%= locals.oldData ? oldData.telefono : null %>"
+                id="telefono"
+              >
               <% if (locals.errors && errors.telefono) { %>
                 <div class="invalid-input">
                   <%= errors.telefono.msg %>
@@ -62,7 +72,8 @@
             <div class="form-group">
               <label>Contrase&ntilde;a</label>
               <input type="password" name="password"
-                class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" id="password"
+                >
               <% if (locals.errors && errors.password) { %>
                 <div class="invalid-input">
                   <%= errors.password.msg %>
@@ -71,10 +82,10 @@
             </div>
 
             <div class="form-group">
-              <label>Dirección</label>
+              <label>Direcci&oacute;n</label>
               <input type="text" name="address"
                 class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.address : null %>">
+                value="<%= locals.oldData ? oldData.address : null %>" id="address">
               <% if (locals.errors && errors.address) { %>
                 <div class="invalid-input">
                   <%= errors.address.msg %>
@@ -83,10 +94,10 @@
             </div>
 
             <div class="form-group">
-              <label>Código Postal</label>
+              <label>C&oacute;digo Postal</label>
               <input type="number" name="zipcode"
                 class="form-control <%= locals.errors && errors.zipcode ? 'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.zipcode : null %>">
+                value="<%= locals.oldData ? oldData.zipcode : null %>" id="zipcode">
               <% if (locals.errors && errors.zipcode) { %>
                 <div class="invalid-input">
                   <%= errors.zipcode.msg %>
@@ -108,7 +119,7 @@
             <div class="form-group">
               <label>Imagen de Perfil:</label>
               <input type="file" name="image"
-                class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>">
+                class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>" id="image">
               <% if (locals.errors && errors.image) { %>
                 <div class="invalid-input">
                   <%= errors.image.msg %>
@@ -126,7 +137,9 @@
           </form>
         </div>
       </section>
-      <%- include('../partials/follow-us') %> <%- include('../partials/footer') %>
-  </body>
-
-</html>
+      <%- include('../partials/follow-us') %> 
+      
+      <script src="/js/helpers.js"></script>
+      <script src="/js/validateRegister.js"></script>
+      
+      <%- include('../partials/footer') %>

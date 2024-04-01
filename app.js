@@ -13,6 +13,8 @@ const adminRouter = require('./routes/adminRouter');
 const apiUsersRouter = require("./routes/api/users");
 const apiProductsRouter = require("./routes/api/products");
 
+const addCors =require("./middlewares/addCors")
+
 const usernameInCookie = require("./middlewares/usernameInCookie");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
@@ -24,6 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride("_method"));
+app.use(addCors)
 
 // Middleware de session
 app.use(session({

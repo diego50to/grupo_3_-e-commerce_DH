@@ -6,8 +6,12 @@
   box-sizing: border-box;
 }
 
-ol,
+/* ol,
 ul {
+  list-style: none;
+} */
+
+.main-menu {
   list-style: none;
 }
 
@@ -17,6 +21,10 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   color: #728e5d;
+}
+
+#errors-list {
+  margin-left: 1rem;
 }
 
 h2::before {
@@ -807,4 +815,10 @@ form button {
 .user-info h2,
 .user-info p {
   margin: 0;
+}
+
+.errors-area {
+  background-color: #ffdddd;  
+  padding: 1rem;
+  margin: 1rem;
 }

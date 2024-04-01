@@ -31,6 +31,7 @@ const usersAPIController = {
   },
 
   detail: (req, res) => {
+    console.log(req.params);
     db.User.findByPk(req.params.id, {
       include: [
         {
@@ -57,6 +58,39 @@ const usersAPIController = {
       res.json(respuesta);
     });
   },
+
+  getUserByEmail: (req, res) => {
+
+    db.Person.findAll({
+      where: {
+        email: req.params.email
+      }
+    }).then( (personas) => {      
+      let respuesta = {
+        meta: {
+          status: 200,
+          count: personas.length,
+          url: "/api/users/:email/getbyemail",
+        }
+      }
+      
+      res.json(respuesta);
+    });    
+  },
+
+  getUserByUsername: (req, res) => {
+
+    db.User.findAll({
+      where: {
+        username: req.params.username
+      }
+    }).then((users) => {
+      const respuesta = {
+        cantidad: users.length
+      }      
+      res.json(respuesta);
+    });
+  }  
 };
 
 module.exports = usersAPIController;

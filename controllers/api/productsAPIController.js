@@ -13,6 +13,9 @@ const productsAPIController = {
         },
       ],
     }).then((products) => {
+
+      
+
       let respuesta = {
         meta: {
           status: 200,
@@ -39,6 +42,7 @@ const productsAPIController = {
         },
       ],
     }).then((product) => {
+
       let respuesta = {
         meta: {
           status: 200,
