@@ -14,16 +14,16 @@
             <div class="product-list ">
               <% products.forEach( product=> {%>
                 <div class="product">
-                  <a href="/products/"<%= product.id%>>
+                  <a href="/products/<%= product.id %>">
                   <img src="/images/<%= product.image %>" alt="<%= product.image %>" >
                   </a>
                   <h2>
-                    <a href="/products/"<%= product.id%>>
+                    <a href="/products/<%= product.id %>"> 
                     <%= product.name %>
                     </a>
                   </h2>
                   <p>
-                    <a href="/products/"<%= product.id%>> <%= product.description %></a>
+                    <a href="/products/<%= product.id %>"> <%= product.description %></a>
                   </p>
                   <p class="price">Precio: <%= product.price %>
                   </p>
