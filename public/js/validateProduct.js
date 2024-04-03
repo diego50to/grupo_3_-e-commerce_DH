@@ -1,11 +1,11 @@
 window.addEventListener('load', function () {
   const form = document.querySelector('#productForm')
   form.addEventListener('submit', function (event) {
-
-    event.preventDefault()
-
+    
     let errores = []
 
+    const id = document.querySelector('#id')
+    
     const name = document.querySelector('#name')
     const description = document.querySelector('#description')
     const image = document.querySelector('#image')
@@ -22,14 +22,17 @@ window.addEventListener('load', function () {
       errores.push('La descripcion debe ser de al menos 20 caractres')
     }
 
-    if (image.value == '') {
-      errores.push('La imagen del producto es obligatoria')
-    } else {
-      const extPermitidas = /(.jpeg|.jpg|.png|.gif)$/i;
-      const pruebaExtension = extPermitidas.test(image.value.trim())
-
-      if (!pruebaExtension) {
-        errores.push('El formato de archivo de imagen no es valido ')
+    // Validamos la imagen solo si es un nuevo producto
+    if (id.value.trim() == '') {
+      if (image.value == '') {
+        errores.push('La imagen del producto es obligatoria')
+      } else {
+        const extPermitidas = /(.jpeg|.jpg|.png|.gif)$/i;
+        const pruebaExtension = extPermitidas.test(image.value.trim())
+  
+        if (!pruebaExtension) {
+          errores.push('El formato de archivo de imagen no es valido ')
+        }
       }
     }
 

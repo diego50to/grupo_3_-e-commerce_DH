@@ -1,28 +1,71 @@
-<!DOCTYPE html>
-<html lang="es">
+<!-- <!DOCTYPE html>
+<html lang="es"> -->
 <%- include('./partials/head') %>
 
   <body>
     <%- include('./partials/header') %>
       <main class="container">
-
+<!-- 
         <section class="carousel">
           <button class="carousel-control prev">
             <i class="fa-solid fa-caret-left"></i>
           </button>
+          
           <div class="carousel-images">
-            <img src="images/cayote.jpg" alt="Imagen 1" />
+            <div class="item">
+              <img src="/images/madera.png" alt="Imagen 1" />
+            </div>
+            <div class="item">
+              <img src="/images/pack.png" alt="Imagen 1" />
+            </div>
+            <div class="item">
+              <img src="/images/alfajor.png" alt="Imagen 1" />
+            </div>
+
           </div>
+          
           <button class="carousel-control next">
             <i class="fa-solid fa-caret-right"></i>
           </button>
+          
           <div class="carousel-dots">
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
           </div>
-          </div>
+          
         </section>
+ -->
+        <div class="carousel-container">
+
+          <button class="carousel-control prev">
+            <i class="fa-solid fa-caret-left"></i>
+          </button>
+
+          <div class="carousel">
+            <div class="item active">
+              <img src="/images/madera.png" alt="Image 1" />
+            </div>
+            <div class="item">
+              <img src="/images/pack.png" alt="Image 2" />
+            </div>
+            <div class="item">
+              <img src="/images/alfajor.png" alt="Image 3" />
+            </div>
+          </div>
+
+          <button class="carousel-control next">
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+
+          <div class="carousel-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
+          <div class="dots"></div>
+        </div>
 
         <section class="featured-products container">
           <h2><span>Productos Destacados</span></h2>
@@ -44,8 +87,8 @@
 
         <%- include('./partials/follow-us') %>
       </main>
+      <script src="js/burger.js"></script>
       <%- include('./partials/footer') %>
-        <script src="js/burger.js"></script>
-  </body>
+  <!-- </body>
 
-</html>
+</html> -->

@@ -9,17 +9,22 @@ const validateProduct = [
     .isLength({ min: 20 }).withMessage('La descripción es de al menos 20 caracteres'),
   check('image')
     .custom((value, { req }) => {
-      if (!req.file) {
-        throw new Error('El archivo de imagen es obligatorio')
-      } else {
-        const types = ['image/jpeg', 'image/gif', 'image/png']
-        if (types.includes(req.file.mimetype)) {
-          return '.png'; // return "non-falsy" value to indicate valid data"
+      console.log('ID', req.body.id);
+      if (req.body.id == '') {
+        if (!req.file) {
+          throw new Error('El archivo de imagen es obligatorio')
         } else {
-          //return false; // return "falsy" value to indicate invalid data
-          //console.log('Error de formato imagen');
-          throw new Error('Formato de imagen no valido')
+          const types = ['image/jpeg', 'image/gif', 'image/png']
+          if (types.includes(req.file.mimetype)) {
+            return '.png'; // return "non-falsy" value to indicate valid data"
+          } else {
+            //return false; // return "falsy" value to indicate invalid data
+            //console.log('Error de formato imagen');
+            throw new Error('Formato de imagen no valido')
+          }
         }
+      } else {
+        return '.png'; // return "non-falsy" value to indicate valid data"
       }
     })
 ];

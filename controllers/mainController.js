@@ -40,6 +40,9 @@ const mainController = {
   },
   about: (req, res) => {
     res.render('about')
+  },
+  contact: (req, res) => {
+    res.render('contact')
   }
 }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-03-2024 a las 17:08:37
+-- Tiempo de generación: 03-04-2024 a las 07:31:46
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -82,10 +82,13 @@ CREATE TABLE `persons` (
 --
 
 INSERT INTO `persons` (`id`, `name`, `email`, `image`, `phonenumber`, `address`, `zipcode`, `state_id`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
-(4, 'Jose Gomez', 'moe@email.com', 'image-1705517580125.png', '3835520577', '', '4700', 1, NULL, '2024-03-27 23:14:39', NULL),
-(5, 'Juan Antonio Perez', 'jperez@gmail.com', 'image-1705533471211.jpeg', '3835963623', NULL, NULL, 1, NULL, NULL, NULL),
+(4, 'pablo perez', 'pablo@gmail.com.ar', 'image-1705517580125.png', '3835520577', '', '4700', 1, NULL, '2024-03-30 19:31:19', NULL),
+(5, 'Juan Antonio Perez', 'jperez@gmail.com', 'image-1705533471211.jpeg', '3835963623', '', '', 1, NULL, '2024-03-30 14:59:12', NULL),
 (9, 'Margareth Simpson', 'maggie.cimpson@email.com', 'image-1711495673567.jpg', '123456', '', '', 1, NULL, NULL, '2024-03-27 19:50:13'),
-(10, 'Juan Perez', 'juan@email.com', 'image-1711496187833.jpg', '78451245', '', '', 1, NULL, NULL, NULL);
+(10, 'Juan Perez', 'juan@email.com', 'image-1711496187833.jpg', '78451245', '', '', 1, NULL, NULL, NULL),
+(11, 'Ned Flanders', 'ned@email.com', 'image-1711983592783.png', '2314234', 'av rivadavia', '5656', 1, '2024-04-01 14:59:52', '2024-04-01 14:59:52', NULL),
+(12, 'Franco Soria', 'franso@gmail.com.ar', 'image-1711991854137.png', '345345', 'los ceibos 800', '44441', 1, '2024-04-01 17:17:34', '2024-04-01 17:17:34', NULL),
+(13, 'Leonel Alvarez', 'leonel@email.com', 'image-1711992117974.png', '22222', 'los ceibos 800', '7778', 1, '2024-04-01 17:21:58', '2024-04-01 17:21:58', NULL);
 
 -- --------------------------------------------------------
 
@@ -124,7 +127,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `image`, `category_id`, `st
 (14, 'Harina de maíz morado', 'La harina de maíz morado es un producto tradicional del norte argentino, obtenida de maíz morado cultivado en la región. Ideal para preparar platos típicos como la humita o la polenta.', 'https://ejemplo.com/harina-maiz-morado.jpg', 1, 25, 80, NULL, 0, '2024-03-17 23:47:36', NULL, NULL),
 (15, 'Miel de caña', 'La miel de caña es un producto típico del norte argentino, obtenida del jugo de la caña de azúcar. Con su sabor dulce y su textura suave, es perfecta para endulzar cualquier postre.', 'https://ejemplo.com/miel-de-cana.jpg', 1, 35, 180, NULL, 0, '2024-03-17 23:47:36', NULL, NULL),
 (16, 'Locro criollo', 'El locro criollo es un plato típico del norte argentino, elaborado con maíz, porotos, carne y verduras. Su sabor único y reconfortante lo convierte en un clásico de la cocina regional.', 'https://ejemplo.com/locro-criollo.jpg', 1, 15, 300, NULL, 0, '2024-03-17 23:47:36', NULL, NULL),
-(17, 'Poncho de vicuña', 'It is a long established fact that a reader will be distracted by the readable. Many desktop publishing packages and web page editors now use Lorem Ipsum as ', 'image-1710977368857.png', 1, 0, 0, NULL, 0, '2024-03-20 23:29:28', '2024-03-20 23:29:28', NULL),
+(17, 'Poncho de vicuña', 'It is a long established fact that a reader will be distracted by the readable. Many desktop publishing packages and web page editors now use Lorem Ipsum as ', 'image-1710977368857.png', 1, 0, 0, NULL, 0, '2024-03-20 23:29:28', '2024-03-20 23:29:28', '2024-04-02 16:42:23'),
 (18, 'Poncho de vicuña', 'It is a long established fact that a reader will be distracted by the readable. Many desktop publishing packages and web page editors now use Lorem Ipsum as ', 'image-1710977368857.png', 1, 0, 0, NULL, NULL, '2024-03-20 23:29:28', '2024-03-20 23:29:28', '2024-03-27 20:37:57'),
 (19, 'Poncho de vicuña', 'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.', 'image-1710984689064.png', 1, 0, 0, NULL, 0, '2024-03-21 01:31:29', '2024-03-21 01:31:29', '2024-03-27 20:37:54'),
 (20, 'Producto de prueba', 'probando probandoprobando probandoprobando probandoprobando probandoprobando probandoprobando probandoprobando probandoprobando probandoprobando probandoprobando probandoprobando probando', 'image-1710985664629.png', 4, 0, 0, NULL, 0, '2024-03-21 01:47:44', '2024-03-21 01:47:44', NULL),
@@ -141,8 +144,16 @@ INSERT INTO `products` (`id`, `name`, `description`, `image`, `category_id`, `st
 (31, 'Dulce de Manzana en frasco', 'Déjate cautivar por el sabor único de la manzana catamarqueña enfrascada. Con ingredientes de alta calidad y un proceso de elaboración artesanal, este dulce es una verdadera joya culinaria. Frasco de 380g', 'image-1711633645619.png', 4, 20, 4500, NULL, 380, NULL, '2024-03-28 13:47:25', NULL),
 (32, 'Dulce de Naranja en frasco', 'Disfruta de la intensidad y el aroma fresco de la naranja catamarqueña en este delicioso dulce enfrascado. Perfecto para disfrutar en cualquier momento del día. Frasco de 380g', 'image-1711633665575.png', 4, 15, 4500, NULL, 380, NULL, '2024-03-28 13:47:45', NULL),
 (33, 'Dulce de Membrillo en pan', 'Deléitate con el clásico sabor del pan de membrillo catamarqueño, elaborado con membrillos frescos y cocido lentamente hasta alcanzar una textura suave y un sabor inigualable. Pan de 500g', 'image-1711633687929.png', 4, 15, 5500, NULL, 500, NULL, '2024-03-28 13:48:07', NULL),
-(34, 'Aceite de Oliva', 'Descubre el exquisito sabor y la calidad superior del aceite de oliva catamarqueño. Elaborado con aceitunas de variedades seleccionadas y prensado en frío para conservar todos sus beneficios para la salud y su incomparable sabor. Un imprescindible en cualquier cocina gourmet.', 'image-1711633703374.png', 3, 25, 10000, NULL, 500, NULL, '2024-03-28 13:48:23', NULL),
-(35, 'Aceitunas Verdes', 'Descubre la auténtica esencia de Catamarca con nuestras aceitunas enfrascadas. Cultivadas con cuidado en los fértiles suelos de la región, estas aceitunas ofrecen un sabor único y una textura irresistible. Perfectas para acompañar tus ensaladas, aperitivos o simplemente disfrutar como un delicioso tentempié.', 'image-1711633718184.png', 3, 20, 8000, NULL, 500, NULL, '2024-03-28 13:48:38', NULL);
+(34, 'Aceite de Oliva Extra Virgen', 'Descubre el exquisito sabor y la calidad superior del aceite de oliva catamarqueño. Elaborado con aceitunas de variedades seleccionadas y prensado en frío para conservar todos sus beneficios para la salud y su incomparable sabor. Un imprescindible en cualquier cocina gourmet.', 'image-1711633703374.png', 3, 50, 10000, NULL, 500, NULL, '2024-04-03 01:43:57', NULL),
+(35, 'Aceitunas Verdes', 'Descubre la auténtica esencia de Catamarca con nuestras aceitunas enfrascadas. Cultivadas con cuidado en los fértiles suelos de la región, estas aceitunas ofrecen un sabor único y una textura irresistible. Perfectas para acompañar tus ensaladas, aperitivos o simplemente disfrutar como un delicioso tentempié.', 'image-1711633718184.png', 3, 20, 8000, NULL, 500, NULL, '2024-03-28 13:48:38', NULL),
+(36, 'Poncho de vicuña', 'Sumérgete en la elegancia y la tradición andina con nuestro exquisito poncho de vicuña. Tejido a mano por artesanos locales, este poncho representa la belleza natural y la artesanía ancestral de Catamarca. Confeccionado con la suave lana de la vicuña, este poncho es una obra de arte que te envolverá en comodidad y estilo.', 'image-1712076170734.png', 1, 5, 60000, NULL, 900, '2024-03-20 23:29:28', '2024-04-02 16:42:50', NULL),
+(37, 'Alpargatas de Gamuzón', 'Descubre la comodidad y el estilo auténtico de nuestras alpargatas de gamuzón. Hechas a mano por expertos artesanos de Catamarca, estas alpargatas combinan la durabilidad del gamuzón con el diseño tradicional de las alpargatas. Perfectas para pasear por la ciudad o relajarse en casa, estas alpargatas te ofrecen un estilo único y una comodidad incomparable.', 'image-1712076108709.png', 1, 8, 20000, NULL, 500, '2024-03-30 20:53:41', '2024-04-02 16:41:48', NULL),
+(38, 'Alfajor Artesanal de dulce de leche', 'Disfruta de la dulzura y el sabor casero de nuestro alfajor artesanal de dulce de leche. Elaborado con ingredientes de alta calidad y una receta tradicional, cada bocado de este alfajor te transportará a los sabores auténticos de Catamarca. Con su suave masa y su generoso relleno de dulce de leche, este alfajor es una verdadera delicia para el paladar. Perfecto para disfrutar en cualquier momento del día.', 'image-1712075553609.png', 3, 80, 500, NULL, 60, '2024-03-25 19:44:20', '2024-04-02 16:32:33', NULL),
+(39, 'Licor de Cereza', 'Deléitate con el delicioso sabor de nuestro licor de cereza catamarqueño. Elaborado con cerezas frescas de la región y una cuidadosa selección de ingredientes, este licor ofrece un equilibrio perfecto entre dulzura y frescura. Disfrútalo solo, con hielo o como ingrediente en tus cócteles favoritos.', 'image-1712076077218.png', 2, 20, 2000, NULL, 250, '2024-03-30 20:54:48', '2024-04-02 16:41:17', NULL),
+(40, 'Vino Tinto Malbec', 'Descubre la excelencia enológica de Catamarca con nuestro vino tinto Malbec. Elaborado con uvas Malbec cultivadas en los viñedos de la región, este vino ofrece un aroma intenso, notas frutales y una estructura elegante. Perfecto para acompañar tus comidas o para disfrutar en cualquier ocasión especial.', 'image-1712076045009.png', 2, 30, 4000, NULL, 750, '2024-03-30 20:55:34', '2024-04-02 16:40:45', NULL),
+(41, 'Mate de Cerámica', 'Disfruta de tu mate con estilo gracias a nuestra mate de cerámica. Hecho a mano por talentosos ceramistas de Catamarca, este mate combina la tradición del mate con un diseño elegante y moderno. Su interior esmaltado facilita la limpieza y resalta el sabor de la yerba mate.', 'image-1712075950229.png', 5, 5, 3000, NULL, 250, '2024-03-30 20:56:25', '2024-04-02 16:39:10', NULL),
+(42, 'Taza de Cerámica', 'Eleva tu experiencia de tomar café o té con nuestra taza de cerámica. Hecha a mano con arcilla de la región por hábiles artesanos, cada taza es única en su diseño y textura. Su tamaño generoso y su forma ergonómica la hacen ideal para disfrutar de tus bebidas calientes favoritas. Disponible en una variedad de colores y acabados, esta taza añadirá un toque artesanal a tu rutina diaria.', 'image-1712075904889.png', 5, 10, 4000, NULL, 400, '2024-03-30 20:57:21', '2024-04-02 16:38:24', NULL),
+(43, 'Dulce de Leche Casero', 'Disfruta del sabor auténtico y la cremosidad incomparable de nuestro dulce de leche casero. Elaborado con leche fresca de la región y una receta tradicional transmitida de generación en generación, este dulce de leche es una verdadera delicia para los amantes de lo dulce. Unta generosamente sobre tus tostadas, panqueques o simplemente disfrútalo a cucharadas.', 'image-1712075869695.png', 3, 8, 3500, NULL, 250, '2024-03-30 20:58:19', '2024-04-02 16:37:49', NULL);
 
 -- --------------------------------------------------------
 
@@ -238,7 +249,10 @@ INSERT INTO `users` (`id`, `username`, `password`, `rol_id`, `person_id`, `creat
 (1, 'admin', '$2a$10$JdPHvGIyIr6QbbY9cO6VEeQWKyh/MtXYLdkt1zD//drrrdzuUgpDq', 1, 4, NULL, NULL, NULL),
 (2, 'cliente', '$2a$10$mQAm318sqhE.nX3xeKjb4uRaaM1juGrcVffM21S0BIhNRAdHge2Jq', 2, 5, NULL, NULL, NULL),
 (5, 'maggie', '$2a$10$xscjiI9M9qojQNADOhybc.mihQPskkTaK6pYyGSP/.dB/AevknlZq', 1, 9, '2024-03-26 23:27:53', '2024-03-26 23:27:53', '2024-03-27 19:50:13'),
-(6, 'jperez', '$2a$10$xscjiI9M9qojQNADOhybc.mihQPskkTaK6pYyGSP/.dB/AevknlZq', 1, 10, '2024-03-26 23:36:27', '2024-03-26 23:36:27', '2024-03-27 14:37:26');
+(6, 'jperez', '$2a$10$xscjiI9M9qojQNADOhybc.mihQPskkTaK6pYyGSP/.dB/AevknlZq', 1, 10, '2024-03-26 23:36:27', '2024-03-26 23:36:27', '2024-03-27 14:37:26'),
+(7, 'ned', '$2a$10$C0vU3mv5usTXM2TsWkACLeV9hI8QKDuY5ivcfR0Q8zAH0frcI.yD2', 2, 11, '2024-04-01 14:59:52', '2024-04-01 14:59:52', NULL),
+(8, 'franso', '$2a$10$0LvpwKuX8jim2ftHucOHFOYdUrUU5IHSkQ0vQBfajx4KxRF5sy/4i', 2, 12, '2024-04-01 17:17:34', '2024-04-01 17:17:34', NULL),
+(9, 'leon', '$2a$10$zDiyTZBzTQMj.1JkLlKsAugeeSYA8zl9N6VY9g6tCVRvPM9VQByV2', 2, 13, '2024-04-01 17:21:58', '2024-04-01 17:21:58', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -326,13 +340,13 @@ ALTER TABLE `payment_methods`
 -- AUTO_INCREMENT de la tabla `persons`
 --
 ALTER TABLE `persons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -362,7 +376,7 @@ ALTER TABLE `states`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
