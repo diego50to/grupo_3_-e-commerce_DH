@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="es">
 <%- include('../partials/head') %>
 
   <body>
@@ -31,7 +32,7 @@
             <div class="price">
               $ <%= product.price %>
             </div>
-            <!-- <h4>Medios de Pago</h4> -->
+            <h4>Medios de Pago</h4>
             <h4>Detalles del producto</h4>
             <p>
               <%= product.description %>
@@ -42,22 +43,35 @@
         <section class="featured-products container">
           <h2><span>Productos Relacionados</span></h2>
           <div class="card-grid">
-            <% relatedProducts.forEach( product=> {%>
-              <div class="card">
-                <img src="/images/<%=product.image%>" alt="Imagen del producto" />
-                <h3>
-                  <%= product.name %>
-                </h3>
-                <p>
-                  
-                  <%= product.description.substring(0, 41) + '...' %>
-                </p>
-                <a href="/products/<%= product.id%>" class="button">Ver más</a>
-              </div>
-              <% }); %>
-
+            <div class="card">
+              <img src="/images/cayote.jpg" alt="Imagen del producto" />
+              <h3>Nombre del producto</h3>
+              <p>Descripción del producto</p>
+              <a href="/productDetail" class="button">Ver más</a>
+            </div>
+            <div class="card">
+              <img src="/images/cayote.jpg" alt="Imagen del producto" />
+              <h3>Nombre del producto</h3>
+              <p>Descripción del producto</p>
+              <a href="/productDetail" class="button">Ver más</a>
+            </div>
+            <div class="card">
+              <img src="/images/cayote.jpg" alt="Imagen del producto" />
+              <h3>Nombre del producto</h3>
+              <p>Descripción del producto</p>
+              <a href="/productDetail" class="button">Ver más</a>
+            </div>
+            <div class="card">
+              <img src="/images/cayote.jpg" alt="Imagen del producto" />
+              <h3>Nombre del producto</h3>
+              <p>Descripción del producto</p>
+              <a href="/productDetail" class="button">Ver más</a>
+            </div>
           </div>
         </section>
         <%- include('../partials/follow-us') %>
       </main>
       <%- include('../partials/footer') %>
+  </body>
+
+</html>

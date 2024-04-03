@@ -35,12 +35,39 @@ const productsController = {
     })
   },
 
-  detail: (req, res) => {
+/*   detail: (req, res) => {
     const { id } = req.params;
     //const productDetail = products.find((p) => p.id === Number(id));
     db.Product.findByPk(req.params.id)
       .then((product) => {
         res.render("products/productDetail", { product });
+      })
+      .catch((error) => {
+        res.send(error);
+      });
+  }, */
+
+  detail: (req, res) => {
+    const { id } = req.params;
+    let productDetail;
+
+    db.Product.findByPk(id)
+      .then((product) => {
+        productDetail = product;
+        return db.Product.findAll({
+          where: {
+            category_id: product.category_id,
+            id: { [db.Sequelize.Op.not]: id },
+          },
+          order: [["id", "DESC"]],
+          limit: 4,
+        });
+      })
+      .then((relatedProducts) => {
+        res.render("products/productDetail", {
+          product: productDetail,
+          relatedProducts,
+        });
       })
       .catch((error) => {
         res.send(error);
