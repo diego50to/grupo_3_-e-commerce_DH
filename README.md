@@ -25,6 +25,7 @@ Consumidores que se distinguen por su gusto hacia productos de origen natural, a
 - Alexander Segovia: Fotógrafo, de Hualfín, Catamarca, aporta una perspectiva creativa única al equipo. Tiene además conocimiento en Diseño Gráfico, Edición Digital de Imágenes. Entusiasta y predispuesto, con gran habilidad para trabajar de manera colaborativa y eficiente. Siempre dispuesto a aprender.
 
 - Diego Soto: Comunicador Social, posee un conocimiento en programación y desarrollo adquirido a través de múltiples cursos y en forma autodidacta. Su convicción de mantenerse al tanto de las últimas tecnologías y metodologías de trabajo refleja su disposición para enfrentar desafíos en un entorno tecnológico en constante evolución.
+- Fernando Lopez: Ingeniero, formado en la UTN Regional Tucuman, con años de experiencia en desarrollo de software, docente del Instituto San Martin.
 
 ## Sitios de Referencia:
 
