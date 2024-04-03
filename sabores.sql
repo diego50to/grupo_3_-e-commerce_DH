@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-04-2024 a las 07:31:46
+-- Tiempo de generación: 03-04-2024 a las 07:57:16
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -82,7 +82,7 @@ CREATE TABLE `persons` (
 --
 
 INSERT INTO `persons` (`id`, `name`, `email`, `image`, `phonenumber`, `address`, `zipcode`, `state_id`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
-(4, 'pablo perez', 'pablo@gmail.com.ar', 'image-1705517580125.png', '3835520577', '', '4700', 1, NULL, '2024-03-30 19:31:19', NULL),
+(4, 'pablo perez', 'pablo@gmail.com.ar', 'image-1712123005079.jpg', '3835520577', '', '4700', 1, NULL, '2024-04-03 05:43:25', NULL),
 (5, 'Juan Antonio Perez', 'jperez@gmail.com', 'image-1705533471211.jpeg', '3835963623', '', '', 1, NULL, '2024-03-30 14:59:12', NULL),
 (9, 'Margareth Simpson', 'maggie.cimpson@email.com', 'image-1711495673567.jpg', '123456', '', '', 1, NULL, NULL, '2024-03-27 19:50:13'),
 (10, 'Juan Perez', 'juan@email.com', 'image-1711496187833.jpg', '78451245', '', '', 1, NULL, NULL, NULL),
