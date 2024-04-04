@@ -1,3 +1,89 @@
+# Retrospectiva – 8° Sprint - Grupo 3 - Sabores de Catamarca
+
+## ⭐ ESTRELLA DE MAR
+
+### 1 - Comenzar a hacer. ▶️
+
+- Pruebas de validación para verificar que la aplicación cumple con los requisitos establecidos.
+
+### 2. Hacer más. 🚀
+
+- Mejoras en la experiencia de usuario.
+- Coordinación eficiente para cumplir con los plazos establecidos.
+
+### 3. Continuar haciendo. ♾️
+
+- Colaboración efectiva entre los miembros del equipo.
+- Priorización de los requerimientos según su importancia y urgencia.
+- Asignación en función de las habilidades de cada integrante del grupo.
+- Revisiones del cumplimiento de los requerimientos de cada Sprint realizado.
+
+### 4. Hacer menos. ⤵️
+
+- Dentro de las actividades llevadas a cabo, no hemos determinado acciones o cosas que no aporten valor.
+
+### 5. Dejar de hacer. 🚫
+
+- Dentro de las actividades llevadas a cabo, no hemos determinado acciones o cosas que no aporten valor.
+
+# Retrospectiva – 7° Sprint - Grupo 3 - Sabores de Catamarca
+
+## ⭐ ESTRELLA DE MAR
+
+### 1 - Comenzar a hacer. ▶️
+
+- Necesidad de reestructurar la aplicación. Implementación de panel de Admin
+- Priorización de los requerimientos según su importancia y urgencia.
+
+### 2. Hacer más. 🚀
+
+- Retroalimentación constructiva entre los miembros del equipo.
+- Revisiones del cumplimiento de los requerimientos de cada Sprint realizado.
+
+### 3. Continuar haciendo. ♾️
+
+- Mejoras en la experiencia de usuario.
+- Colaboración efectiva entre los miembros del equipo.
+- Asignación en función de las habilidades de cada integrante del grupo.
+
+### 4. Hacer menos. ⤵️
+
+- Dentro de las actividades llevadas a cabo, no hemos determinado acciones o cosas que no aporten valor.
+
+### 5. Dejar de hacer. 🚫
+
+- Dentro de las actividades llevadas a cabo, no hemos determinado acciones o cosas que no aporten valor.
+
+# Retrospectiva – 6° Sprint - Grupo 3 - Sabores de Catamarca
+
+## ⭐ ESTRELLA DE MAR
+
+### 1 - Comenzar a hacer. ▶️
+
+- Mejoras en la experiencia de usuario.
+  -Retroalimentación constructiva entre los miembros del equipo.
+
+### 2. Hacer más. 🚀
+
+- Aprendizaje y mejora continua.
+- Revisiones del cumplimiento de los requerimientos de cada Sprint realizado.
+- Concreción de tareas o actividades que quedaron pendiente.
+- Revisión y adaptación de las vistas en función del desarrollo de la aplicación.
+
+### 3. Continuar haciendo. ♾️
+
+- Colaboración efectiva entre los miembros del equipo.
+- Asignación en función de las habilidades de cada integrante del grupo.
+- Continuar con el apoyo, la motivación y retroalimentación entre los miembros del equipo.
+
+### 4. Hacer menos. ⤵️
+
+- Dentro de las actividades llevadas a cabo, no hemos determinado acciones o cosas que no aporten valor.
+
+### 5. Dejar de hacer. 🚫
+
+- Dentro de las actividades llevadas a cabo, no hemos determinado acciones o cosas que no aporten valor.
+
 # Retrospectiva – 5° Sprint - Grupo 3 - Sabores de Catamarca
 
 ## ⭐ Starfish retrospective
